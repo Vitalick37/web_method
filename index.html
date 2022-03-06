@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css?_v=20220306173515">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="upward _icon-arrow-right"></div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__wrapper">
+				<div class="header__container">
+					<div class="header__body">
+						<div class="header__main">
+							<a href="#" class="header__logo">Gulp</a>
+						</div>
+						<div class="header__menu menu-header">
+							<nav class="menu-header__body">
+								<ul class="menu-header__list">
+									<li data-goto-header data-goto=".preview" class="menu-header__item"><a href="" class="menu-header__link">Gulp</a>
+									</li>
+									<li data-goto-header data-goto=".installation" class="menu-header__item"><a href="" class="menu-header__link">Установка</a>
+									</li>
+									<li data-goto-header data-goto=".structure" class="menu-header__item"><a href="" class="menu-header__link">Структура</a>
+									</li>
+									<li data-goto-header data-goto=".task" class="menu-header__item"><a href="" class="menu-header__link">Задачи</a>
+									</li>
+									<li data-goto-header data-goto=".method" class="menu-header__item"><a href="" class="menu-header__link">Методы</a></li>
+								</ul>
+							</nav>
+						</div>
+						<nav class="menu">
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+							<div class="menu__body"></div>
+						</nav>
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="preview">
+				<div class="preview__container">
+					<div class="preview__wrapper">
+						<div class="preview__description">
+							<h1 class="preview__title">Gulp - что это такое и зачем он нужен</h1>
+							<div class="preview__text">Gulp - это инструмент, позволяющий ускорить процесс web-разработки. Gulp
+								автоматически выполняет все самые необходимые часто используемые задачи.</div>
+						</div>
+						<div class="preview__ability ability">
+							<div class="ability__title">Возможности Gulp:</div>
+							<ol class="ability__list">
+								<li class="ability__item">Автоматическая перезагрузка страницы при сохранении кода</li>
+								<li class="ability__item">Использование препроцессоров для CSS (например, <a href="https://only-to-top.ru/blog/tools/2018-05-12-chto-takoe-sass-i-kak-ego-ispolzovat.html" class="ability__link">Sass</a>), для JavaScript (например, CoffeeScript), для HTML (например, Pug)</li>
+								<li class="ability__item">Минификация CSS, JavaScript, HTML (уменьшение размера кода путём удаления ненужных символов и пробелов)</li>
+								<li class="ability__item">Соединение файлов в один (например, из пяти CSS файлов сделать один файл CSS)</li>
+								<li class="ability__item">Создание, удаление и переименование файлов и папок проекта</li>
+								<li class="ability__item">Автоматическое создание вендорных префиксов (-webkit, -moz, -o, -ms), чтобы старые версии браузеров поддерживали все css-свойства</li>
+								<li class="ability__item">Оптимизация изображений</li>
+								<li class="ability__item">И многое другое.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="installation">
+				<div class="installation__container">
+					<h2 class="installation__title title">Как установить Gulp глобально в системе</h2>
+					<p class="installation__text text installation__text_01">Для установки Gulp нам понадобится пакетный менеджер npm,
+						который входит в состав Node.js. С помощью npm мы будем устанавливать пакеты в каталог node_modules. Если
+						Node.js не установлен, то <a href="https://only-to-top.ru/blog/tools/2018-05-11-avtoobnovlenie-stranicy-brauzera-pri-napisanii-koda.html#nodejs_install">устанавливаем
+							его</a>. Далее можно начать установку Gulp</p>
+					<p class="installation__text text installation__text_02">Открыть командную строку и ввести следующий текст:</p>
+					<div class="installation__command">npm i gulp-cli -g</div>
+					<p class="installation__text text installation__text_03">Коротко о том, что это значит:</p>
+					<ul class="installation__list">
+						<li class="installation__item">npm - это менеджер пакетов, с помощью которого будем устанавливать Gulp</li>
+						<li class="installation__item">i (install) - означает установка</li>
+						<li class="installation__item">gulp - это установка Gulp</li>
+						<li class="installation__item">g (global) - установить глобально, а не в какую-то конкретную папку</li>
+					</ul>
+				</div>
+			</section>
+			<section class="structure">
+				<div class="structure__container">
+					<h2 class="structure__title title">Создание структуры Gulp проекта</h2>
+					<p class="structure__text text">Структура может быть практически любой. У нас будет следующая:</p>
+					<picture><source srcset="img/structure/01.webp" type="image/webp"><img src="img/structure/01.png" alt="structure"></picture>
+					<p class="structure__text text">Пояснение:</p>
+					<ul class="structure__list">
+						<li class="structure__item">app/ - рабочая папка проекта, в ней будут находиться все исходники - шрифты, изображения, css и js файлы;</li>
+						<li class="structure__item">dist/ - папка продакшена, в ней будет находиться готовый оптимизированный проект;</li>
+						<li class="structure__item">gulpfile.js - файл конфигурации, в котором будем описывать все задачи Gulp;</li>
+						<li class="structure__item">node_modules/ - папка с модулями и зависимостями;</li>
+						<li class="structure__item">package.json - файл, содержащий информацию о проекте (название, описание, автор, зависимости и т.д.)</li>
+					</ul>
+				</div>
+			</section>
+			<section class="task">
+				<div class="task__container">
+					<h2 class="task__title title">Как создавать задачи (таски) Gulp</h2>
+					<p class="task__text text">Создадим файл gulpfile.js и начнём его заполнение.</p>
+					<p class="task__text text">Сначала нужно подключить Gulp к проекту, который находится в папке node_modules. Для этого напишем следующий код.</p>
+					<div class="task__command command">const {src, dest, watch, series, parallel} = require('gulp');</div>
+					<p class="task__text text">В фигурных скобках мы укажем, все необходимые функции (методы), которые мы будем использовать.</p>
+				</div>
+			</section>
+			<section class="method">
+				<div class="method__container">
+					<h2 class="method__title title">Методы gulp</h2>
+					<p class="method__text text">Мы уже видели в коде выше метод series - который позволяет выполнять перечисляемые
+						задачи последовательно (следующая задача выполняется только после завершения предыдущей). Постепенно мы
+						рассмотрим все методы Gulp.</p>
+					<ul class="method__list">
+						<li class="method__item">srs - какие файлы использовать для обработки в потоке;</li>
+						<li class="method__item">dest - куда выгружать обработанные в потоке файлы (место назначения);</li>
+						<li class="method__item">watch - наблюдение за изменениями в файлах;</li>
+						<li class="method__item">series - вызов задач последовательно;</li>
+						<li class="method__item">parallel - вызов задач параллельно;</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<ul class="menu-header__list">
+					<li data-goto-header data-goto=".main-block" class="menu-header__item"><a href="" class="menu-header__link menu-header__link_footer">Gulp</a>
+					</li>
+					<li data-goto-header data-goto=".collection" class="menu-header__item"><a href="" class="menu-header__link menu-header__link_footer">Установка</a>
+					</li>
+					<li data-goto-header data-goto=".about-us" class="menu-header__item"><a href="" class="menu-header__link menu-header__link_footer">Структура</a>
+					</li>
+					<li data-goto-header data-goto=".about-us" class="menu-header__item"><a href="" class="menu-header__link menu-header__link_footer">Задачи</a>
+					</li>
+					<li data-goto-header data-goto=".footer" class="menu-header__item"><a href="" class="menu-header__link menu-header__link_footer">Методы</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+
+
+	<script src="js/app.js?_v=20220306173515"></script>
+</body>
+
+</html>
